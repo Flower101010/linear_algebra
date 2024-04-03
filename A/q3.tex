@@ -1,0 +1,39 @@
+\section{The Vector Space of Linear Maps}
+
+\begin{problem}{3}
+  假设 $T\in \Hom(\F^n,\F^m)$.  
+  证明存在$A_{j,k}\in\F$ ，其中 $j=1,\dots,m$
+   $k=1,\dots,n$， 使得
+  \begin{equation*}
+  T(x_1,\dots,x_n) = (A_{1,1}x_1 + \dots + A_{1,n}x_n,\dots, A_{m,1}x_1 + \dots + A_{m,n}x_n)
+  \end{equation*}
+  对于每一个 $(x_1,\dots,x_n)\in\F^n$都成立.
+\end{problem}
+  %------------------------------------------------
+\begin{proof}[Proof]
+  对于任意的 $x\in\F^n$，我们可以写 
+  \begin{equation*}
+    x = x_1 e_1 + \dots + x_n e_n,
+  \end{equation*}
+  其中 $e_1,\dots,e_n$ 是 $\F^n$ 的标准基.  
+  因为 $T$ 是线性的，我们有
+  \begin{equation*}
+    Tx = T(x_1 e_1 + \dots +x_n e_n) = x_1 Te_1 + \dots + x_n Te_n.
+  \end{equation*}
+  现在对于 $Te_k\in\F^m$, 其中 $k=1,\dots, n$, 都存在 
+  $A_{1,k},\dots, A_{m,k}\in\F$ 使得
+  \begin{align*}
+    Te_k &= A_{1,k}e_1 + \dots + A_{m,k}e_m\\
+        &= \left(A_{1,k}, \dots, A_{m,k}\right)
+  \end{align*}
+  因此
+  \begin{equation*}
+    x_kTe_k = \left(A_{1,k}x_k, \dots, A_{m,k}x_k\right).
+  \end{equation*}
+  所以我们有
+  \begin{align*}
+    Tx &= \sum_{k = 1}^n \left(A_{1,k}x_k, \dots, A_{m,k}x_k\right)\\
+       &= \left(\sum_{k = 1}^nA_{1,k}x_k, \dots, \sum_{k = 1}^nA_{m,k}x_k \right),
+  \end{align*}
+  就证得存在$A_{j,k}\in\F$ ，其中 $j=1,\dots,m$ 并且 $k=1,\dots,n$ 使得等式成立.
+\end{proof}

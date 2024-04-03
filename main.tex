@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fphw Assignment
+% LaTeX Template
+% Version 1.0 (27/04/2019)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Class by Felipe Portales-Oliva (f.portales.oliva@gmail.com) with template 
+% content and modifications by Vel (vel@LaTeXTemplates.com)
+%
+% Template (this file) License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	12pt, % Default font size, values between 10pt-12pt are allowed
+	%letterpaper, % Uncomment for US letter paper size
+	%spanish, % Uncomment for Spanish
+]{fphw}
+
+%----------------------------------------------------------------------------------------
+% PACKAGES            																						  %
+%----------------------------------------------------------------------------------------
+
+
+% Template-specific packages
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Required for better horizontal rules in tables
+\usepackage{listings} % Required for insertion of code
+\usepackage{enumerate} % To modify the enumerate environment
+\usepackage{amsmath, amsthm, amssymb} % math stuff
+\usepackage{tikz} % graph
+\usetikzlibrary{decorations.markings}
+\usepackage[UTF8,fontset=none,scheme=plain]{ctex}%中文支持
+\usepackage{silence}
+\WarningFilter{xeCJK}{Redefining CJKfamily `\CJKrmdefault'}
+
+%----------------------------------------------------------------------------------------
+% MY COMMANDS   
+%----------------------------------------------------------------------------------------																						  
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\bigO}{\mathcal{O}}
+\newcommand{\Real}{\mathcal{Re}}
+\newcommand{\poly}{\mathcal{P}}
+\newcommand{\mat}{\mathcal{M}}
+\DeclareMathOperator{\Span}{span}
+\newcommand{\Hom}{\mathcal{L}}
+\DeclareMathOperator{\Null}{null}
+\DeclareMathOperator{\Range}{range}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\restr}[1]{|_{#1}}
+
+%----------------------------------------------------------------------------------------
+% SECTION NUMBERING																				           
+%----------------------------------------------------------------------------------------
+
+\renewcommand\thesection{\Alph{section}}
+
+%----------------------------------------------------------------------------------------
+% THEOREMS/LEMMAS/ETC.         																			  
+%----------------------------------------------------------------------------------------
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm-non}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{corollary}[thm]{Corollary}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\setCJKmainfont{Source Han Sans SC}%中文字体设置--非衬线体
+\setCJKmainfont{Source Han Serif SC}%中文字体设置--衬线体
+
+
+\title{Linear Maps} % Assignment title
+
+\author{Flower} % Student name
+
+\date{} % Due date
+
+\institute{University of Mars \\ Institute of Intergalactic Travel} % Institute or school name
+
+\class{Linear Algebar} % Course or class name
+
+%\professor{Dr. Albert Einstein} % Professor or teacher in charge of the assignment
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the assignment title, created automatically using the information in the custom commands above
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT CONTENT
+%----------------------------------------------------------------------------------------
+
+\input{A/q3.tex}
+
+
+
+\end{document}
