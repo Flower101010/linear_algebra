@@ -1,0 +1,32 @@
+\begin{problem}{9}
+  给出一个$\C\rightarrow\C$的函数$\varphi$，
+  对于所有的$z,\omega\in\C$有
+  \begin{displaymath}
+    \varphi(\omega+z) = \varphi(\omega) +\varphi(z)
+  \end{displaymath}
+  但是$\varphi$不是线性的.
+\end{problem}
+
+\begin{proof}
+  定义
+  \begin{align*}
+    \varphi:\C&\to\C\\
+    x + yi &\mapsto x - yi. 
+  \end{align*}
+  然后对于 $x_1 + y_1i, x_2 + y_2i\in\C$, 有
+  \begin{align*}
+    \varphi((x_1 + y_1i) + (x_2 + y_2i)) &= \varphi((x_1 + x_2) + (y_1 + y_2)i)\\ 
+                                         &= (x_1 + x_2) - (y_1 + y_2)i\\ 
+                                         &= (x_1 - y_1)i + (x_2 - y_2)i\\ 
+                                         &= \varphi(x_1 + y_1i) + \varphi(x_2 + y_2i)
+  \end{align*}
+  所以 $\varphi$ 满足加法分配律.然而
+  \begin{align*}
+    \varphi(i\cdot i) = \varphi(-1) = -1
+  \end{align*}
+  此外
+  \begin{equation*}
+    i\cdot\varphi(i) = i(-i) = 1 
+  \end{equation*}
+  则 $\varphi$ 不是线性的.
+\end{proof}

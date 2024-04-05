@@ -1,0 +1,29 @@
+\begin{problem}{10}
+  设$U$ 是$V$的子集且$U\neq V$.
+  设$S\in\Hom(U,W)$且$S\neq 0$.
+  定义 $T:V\rightarrow W$
+  \begin{equation}
+    Tv=\left\{
+      \begin{aligned}
+        S\nu &, \ \mathrm{if}\ v\in U \\
+        0 &,\ \mathrm{if}\ v\in V\ \mathrm{and}\ v\notin U
+      \end{aligned}
+    \right.
+  \end{equation}
+  证明$T$不是$V$上的线性映射.
+\end{problem} 
+
+
+\begin{proof}
+  令
+  $$v\in U,\ \omega\in V \ \mathrm{and} \ \omega \notin U $$
+  所以有
+  \begin{displaymath}
+    v+\omega \in V\ \mathrm{and} \ v+\omega \notin U  
+  \end{displaymath}
+  故下面不等式成立
+  \begin{displaymath}
+    T(v+\omega) \neq Tv+T\omega
+  \end{displaymath}
+  故$T$ 不是$V$上的线性映射.
+\end{proof}
