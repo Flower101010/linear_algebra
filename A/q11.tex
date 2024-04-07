@@ -1,0 +1,44 @@
+\begin{problem}{11}
+  Suppose $V$ is  finite-dimensional. Prove that every linear
+  map on a subspace of $V$ can be extended to a linear map
+  on $V$. In other words, show that if U is a suspace of $V$ and
+  $S\in\Hom(U,W)$, then there exists $T\in\Hom(V,W)$ such
+  that $Tu=Su$ for all $u\in U$.
+\end{problem}
+
+\begin{proof}
+  设$U$为$V$的子集，则$U$存在一组基向量
+  $v_1,\dots,v_m$. 将该组基向量扩展为
+  $v+1,\dots,v_m,v_{m+1},\dots,v_n$,并且为$V$的一组基向量.
+  则易知对于任意的$z\in V$,都可以找到一组
+  $a_1,\dots,a_n \in \F$ 使得 $z=\sum_{k=1}^{n}a_k v_k$.
+
+  我们设
+  \begin{align*}
+    T:V&\rightarrow w\\
+    \displaystyle\sum_{k=1}^{n}a_k v_k &\rightarrow \displaystyle\sum_{k=1}^{m}a_k S v_k + \displaystyle\sum_{k=m+1}^{n} a_k v_k
+  \end{align*}
+  显然$Tu=Su$,仅需证明$T$ 是线性映射即可.
+
+  证明满足分配律
+  设
+  \[
+    z_1 = a_1v_1+\dots+a_nv_n,\ z_2 = b_1v_1+\dots+b_nv_n
+  \]
+
+  则
+  \begin{align*}
+    T(z_1+z_2) &= \displaystyle\sum_{k=1}^{m} (a_k+b_k)Sv_k + \displaystyle\sum_{k=m+1}^{n} (a_k+b_k) v_k\\
+               &= \displaystyle\sum_{k=1}^{m} a_kSv_k +\displaystyle\sum_{k=m+1}^{n} a_k v_k + \displaystyle\sum_{k=1}^{m} b_kSv_k +\displaystyle\sum_{k=m+1}^{n} b_k v_k\\
+               &=Tz_1+Tz_2
+  \end{align*}
+
+  证明满足数量乘法,设$\lambda\in \F$,则
+  \begin{align*}
+    T(\lambda z) &= \displaystyle\sum_{k=1}^{m} \lambda a_kSv_k + \displaystyle\sum_{k=m+1}^{n} \lambda a_k v_k\\
+                   &= \lambda\displaystyle\sum_{k=1}^{m}  a_kSv_k + \lambda\displaystyle\sum_{k=m+1}^{n}  a_k v_k\\
+                   &= \lambda Tz
+  \end{align*}
+
+  \end{proof}
+

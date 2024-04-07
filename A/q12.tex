@@ -1,0 +1,28 @@
+\begin{problem}{12}
+  设$V$是有限维的向量空间且$\dim V > 0 $, 并设$W$
+  是无限维的向量空间。证明$\Hom(V,W)$是无限维的向
+  量空间.
+\end{problem}
+
+\begin{proof}
+  设$v\in V $ 并且设$\omega_1,\dots$ 是$W$的一组
+  基.则对于任意的$m$,$\omega_1,\dots,\omega_m$
+  都独立.(见2a/14)
+  
+  定义$T_j(v)=\omega_j$,显然$T_j\in\Hom(V,W)$仅需证明
+  数列$T_1,\dots$ 中，任意的$m$,$T_1,\dots,T_m$
+  都独立. 设
+  
+  \[
+    a_1T_1+\dots+a_nT_n = 0
+  \]
+  仅需说明$a_j$全为零是唯一解.
+  \[
+    a_1T_1v+\dots+a_nT_nv = a_1\omega_1+\dots+a_n\omega_n =0
+  \]
+  因为对于任意的$m$,$\omega_1,\dots,\omega_m$
+  都独立.说明$a_j$全为零是唯一解.
+  证得$\Hom(V,W)$是无限维的向
+  量空间.
+\end{proof}
+
