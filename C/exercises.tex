@@ -1,0 +1,55 @@
+%----------------------------------------------------------------------------------------
+%	Problem 1
+%----------------------------------------------------------------------------------------
+\begin{problem}{1}
+设$V$和$W$都是有限维的且$T\in\Hom(V,W)$.
+证明对于$ V $和$ W $的任意基 ，
+$T$ 的矩阵
+都至少有 $\dim\Range T $个非零元 ．
+\end{problem}
+\begin{proof}
+	设$v_1,\dots,V_n$为$V$的基，
+	$w_1,\dots,w_m$为$W$的基,$r=\dim \Range T$ 和
+	$s = \dim \Null T$.所以$V$的基中有$s$个映射到$0$,
+	$r$个映射为非零.
+	若$Tv_k\neq 0 $,则存在唯一一组不不全为零(最少有一个不为零)的$A_{j,k}\in \F$使得
+	\[
+		Tv_k = \displaystyle\sum_{j=1}^{m}A_{j,k}w_j
+	\]
+	能满足$Tv_k\neq 0 $的基向量有$r=\dim \Range T$个.
+	故最少有 $\dim\Range T $个非零元．
+
+\end{proof}
+%----------------------------------------------------------------------------------------
+%	Problem 3
+%----------------------------------------------------------------------------------------
+
+\begin{problem}{3}
+设$V$和$W$都是有限维的且$T\in\Hom(V,W)$.
+证明存在一个$V$的基和$W$的基，使得关于这
+些基，$\mat(T)$除了第$j$行第$j$列($1\leq j \leq \dim \Range T$)的元素
+为1，其余均为0.
+\end{problem}
+\begin{proof}
+	设 $R$ 是$V$ 的子空间且满足
+	\begin{equation*}
+		V = R\oplus \Null T,
+	\end{equation*}
+	设 $r_1,\dots, r_m$ 为$R$的基 (其中$m =\dim\Range T$),
+	并设 $v_1,\dots, v_n$为 $\Null T$的基  (其中 $n = \dim\Null T$).
+	那么 $r_1,\dots, r_m, v_1,\dots,v_n$为$V$的基.
+	而且也易得 $Tr_1,\dots, Tr_m$ 是 $\Range T$的基.
+	因此 扩展上述的基使之成为$W$的基.
+	设 $Tr_1,\dots, Tr_m, w_1,\dots, w_p$ 是这样的基(其中 $p = \dim W - m$).
+	那么对于 $j = 1,\dots m$, 我们有
+	\begin{equation*}
+		Tr_j = \left(\sum_{i = 1}^m\delta_{i,j}\cdot Tr_t\right) + \left(\sum_{k = 1}^p 0\cdot w_k\right),
+	\end{equation*}
+	其中$\delta_{i,j}$ 是克罗内克函数.
+	因此在$\mat(T)$的第$j$行中只有第$j$列为$0$,
+	其中 $j$取 从 $1$ 到 $m = \dim\Range T$任意值.
+	因此 $Tv_1 = \dots = Tv_n = 0$,
+	$\mat(T)$的剩余行全为零 .
+	因此 $\mat(T)$有所需的形式 .
+\end{proof}
+
