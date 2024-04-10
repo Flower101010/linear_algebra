@@ -1,0 +1,17 @@
+\begin{problem}{2}
+假设$V$是一个线性空间并且$S,T\in\Hom(V,V)$满足
+\[
+	\Range S \subset \Null T .
+\]
+证明$(ST)^2=0$
+\end{problem}
+
+\begin{proof}
+	因为$\Range S \subset \Null T$，所以
+	对于任意的$v\in V$都有$TSv=0$.
+	所以对于任意的$u\in V$都有
+	\[
+		(ST)^2u=S[(TS)Tu]=S0=0.
+	\]
+	证得$(ST)^2=0$
+\end{proof}

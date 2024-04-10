@@ -1,0 +1,53 @@
+\begin{problem}{20}
+设$W$是有限维的并且$T\in\Hom(V,W)$.
+证明$T$是单射的当且仅当存在$S\in\Hom(W,V)$
+使得$ST$为$V$上的恒等映射.
+\end{problem}
+
+\begin{proof}
+	定义
+	\begin{displaymath}
+		S = \begin{cases}
+			v, & \text{ if } u\in Tv                        \\
+			0, & \text{ if } u\in W \text{ and } u\notin Tv
+		\end{cases}
+	\end{displaymath}
+	这样就容易证明原命题成立
+\end{proof}
+
+\begin{problem}{21}
+设$W$是有限维的并且$T\in\Hom(V,W)$.
+证明$T$是满射的当且仅当存在$S\in\Hom(W,V)$
+使得$TS$为$W$上的恒等映射.
+\end{problem}
+
+\begin{proof}
+	$(\Rightarrow)$  Suppose $T\in\Hom(V,W)$ is surjective, so that $W$ is necessarily finite-dimensional as well.  Let $v_1,\dots, v_m$ be a basis of $V$ and let $n=\dim W$, where $m\geq n $ by surjectivity of $T$.  Note that
+	\begin{equation*}
+		Tv_1,\dots, Tv_m
+	\end{equation*}
+	span $W$.  Thus we may reduce this list to a basis by removing some elements (possibly none, if $n = m$).  Suppose this reduced list were $Tv_{i_1},\dots, Tv_{i_n}$ for some $i_1,\dots, i_n\in\{1,\dots, m\}$.  We define $S\in\Hom(W,V)$ by its behavior on this basis
+	\begin{equation*}
+		S(Tv_{i_k}) := v_{i_k} \text{ for }k = 1,\dots, n.
+	\end{equation*}
+	Suppose $w \in W$.  Then there exist $a_1,\dots, a_n\in\F$ such that
+	\begin{equation*}
+		w = a_1 Tv_{i_1} + \dots + a_nTv_{i_n}
+	\end{equation*}
+	and thus
+	\begin{align*}
+		TS(w) & = TS\left(a_1 Tv_{i_1} + \dots + a_nTv_{i_n}\right)               \\
+		      & = T\left(S\left( a_1 Tv_{i_1} + \dots + a_nTv_{i_n}\right)\right) \\
+		      & = T\left( a_1 S(Tv_{i_1}) + \dots + a_nS(Tv_{i_n})\right)         \\
+		      & = T(a_1 v_{i_1} + \dots + a_nv_{i_n})                             \\
+		      & = a_1 Tv_{i_1} + \dots + a_nTv_{i_n}                              \\
+		      & = w,
+	\end{align*}
+	and so $TS$ is the identity map on $W$.
+	\par $(\Leftarrow)$ Suppose there exists $S\in\Hom(W,V)$ such that $TS\in\Hom(W,W)$ is the identity map, and suppose by way of contradiction that $T$ is not surjective, so that $\dim \Range TS < \dim W$.  By the Fundamental Theorem of Linear Maps, this implies
+	\begin{align*}
+		\dim W & = \dim\Null TS + \dim \Range TS \\
+		       & < \dim\Null TS + \dim W
+	\end{align*}
+	and hence $\dim\Null TS > 0$, a contradiction, since the identity map can only have trivial null space.  Thus $T$ is surjective, as desired.
+\end{proof}
