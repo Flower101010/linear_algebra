@@ -52,4 +52,38 @@ $T$ 的矩阵
 	$\mat(T)$的剩余行全为零 .
 	因此 $\mat(T)$有所需的形式 .
 \end{proof}
+%----------------------------------------------------------------------------------------
+%	Problem 6
+%----------------------------------------------------------------------------------------
+
+\begin{problem}{6}
+设$V$和$W$都是有限维的，$T\in\Hom(V,W)$.证明
+$\dim \Range T=1$当且仅当$V$和$W$各有一个基
+使得关于这些基$\mat(T)$的所有元素都等于1.
+\end{problem}
+
+\begin{proof}
+	设$v_1,\dots,v_n$是$V$的基，$w_1,\dots,w_m$
+	是$W$的基.关于这些基$\mat(T)$的所有元素都等于1.
+	故
+	\begin{displaymath}
+		Tv_i =w_1+,\dots,+w_m
+	\end{displaymath}
+	因此$\Range T=\text{span}(Tv_1,\dots,Tv_n) = \text{span} (w_1+,\dots,+w_m)$,
+	故$\dim \Range T=1$
+
+	反过来，若$\dim \Range T=1$,
+	则$\dim \Null T = \dim V -1$.
+	设$v_1,\dots,v_n$是$V$的基且$v_2,\dots,v_n\in \Null V$.
+	显然我们可以使$Tv_1,\dots,w_m$
+	为$W$的基.使$w_1=Tv_1-w_2-\dots-w_n$和
+	$e_1=v_1,\ e_i=v_i+v_1$ 其中$i=2,\dots,n$.
+	则有
+	\begin{displaymath}
+		Te_1=Te_i=w_1+,\dots,+w_m.
+	\end{displaymath}
+	显然$e_1,\dots,e_n$是$V$的基，$w_1,\dots,w_m$是$W$的基.
+	且关于这些基$\mat(T)$的所有元素都等于1.
+
+\end{proof}
 
