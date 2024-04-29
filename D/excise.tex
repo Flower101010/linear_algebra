@@ -1,0 +1,79 @@
+%----------------------------------------------------------------------------------------
+%	Problem 1
+%----------------------------------------------------------------------------------------
+
+
+\begin{problem}{1}
+Suppose $T\in\Hom\left( U,V \right) $ and
+$S\in\Hom\left( V,W \right) $ are both invertible
+liner maps. Prove that $ST\in\Hom\left( U,W \right) $
+is invertible and $\left( ST \right)^{-1}=T^{-1}S^{-1}$.
+\end{problem}
+
+
+\begin{proof}
+	易知\[
+		SS^{-1}=I \quad TT^{-1}=I
+	\]
+	仅需说明$ST\cdot T^{-1}S^{-1}=I$即可.
+	显然
+	\[
+		ST\cdot T^{-1}S^{-1}=SIS^{-1}=SS^{-1}=I
+	\]
+\end{proof}
+
+%----------------------------------------------------------------------------------------
+%	Problem 2
+%----------------------------------------------------------------------------------------
+\begin{problem}{2}
+Suppose $V$ is finite-dimensional and $\dim V > 1$.
+Prove that the set of noninvertible operators on $V$
+is not a subspace of $\Hom(V)$.
+\end{problem}
+
+\begin{proof}
+	\[
+		\pdiagmat [ empty = {} ]
+		{ 1, 1, 0, 0 } +\pdiagmat [ empty = {} ]{ 0, 0, 1, 1 } =\pdiagmat [ empty = {} ]{ 1, 1, 1, 1 }
+	\]
+
+	上面的例子说明两个不可逆的映射的和为可逆映射，故不可逆
+	算子构成的集合不是$\Hom(V)$的子空间.
+\end{proof}
+%----------------------------------------------------------------------------------------
+%	Problem 3
+%----------------------------------------------------------------------------------------
+\begin{problem}{3}
+Suppose $V$ is finite-dimensional, $U$ is a subspace
+of $V$, and $S\in\Hom(U,V)$. Prove there exists an
+invertible operator $T\in\Hom(V)$ such that $Tu = Su$
+for every $u\in U$ if and only if $S$ is injective.
+\end{problem}
+
+\begin{proof}
+	先假设$Tu = Su$，则有
+	\[
+		T^{-1}Tu =u =T^{-1}Su
+	\]
+	易知$T^{-1}$是单射的.
+	假设存在$u_1,u_2$使得$Su_1=Su_2$
+	故:\[
+		T^{-1}Su_1 =T^{-1}Su_2.
+	\]
+	可得
+	\[
+		u_1 = u_2.
+	\]
+	假设不成立. 所以 $S$ 是单射的.
+
+	假设$S$ 是单射的. 设$RSu=u$.
+	接下来仅需$R$是$V$上的可逆算子即可.
+	显然$R\in\Hom(V,V)$,仅需说明单射性.因为
+	\[
+		RSu=u
+	\]
+	所以$R$在$\Span S $ 上是单射的。
+	我们仅需定义一下$R$就可以使得其在$V$的其他部分单射。
+	因此可以说明$T=R^{-1}$.
+\end{proof}
+
